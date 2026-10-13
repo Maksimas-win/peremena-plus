@@ -1,0 +1,172 @@
+[
+  {
+    "test": "Opening completes, two poufs appear",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Six story sections",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "3D renderer starts",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Canvas contains rendered geometry",
+    "passed": true,
+    "detail": "software-3d"
+  },
+  {
+    "test": "Keyboard rotates real 3D geometry",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Color changes rendered model",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Photo tab",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Back to 3D",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Before state",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "After state",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "All ten budget calculations",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Maximum quantity cannot exceed 10",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Minimum quantity stays positive",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Minus button recomputes 675 + 125",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Reset returns 750 + 50",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Price source dialog opens",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Price dialog closes with Escape",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Show begins",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Show keyboard next chapter",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Escape ends show",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Reduced motion applies",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No horizontal overflow at 320px",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No horizontal overflow at 390px",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Mobile CTA and budget do not overlap",
+    "passed": true,
+    "detail": "gap=23"
+  },
+  {
+    "test": "No horizontal overflow at 768px",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No horizontal overflow at 1024px",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No horizontal overflow at 1440px",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Replay starts with empty added-pouf layer",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "Replay completes again",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No JavaScript exceptions",
+    "passed": true,
+    "detail": "[]"
+  },
+  {
+    "test": "No-JavaScript content available",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "All local assets exist",
+    "passed": true,
+    "detail": "[]"
+  },
+  {
+    "test": "Unique HTML IDs",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "test": "No external runtime dependencies",
+    "passed": true,
+    "detail": ""
+  }
+]

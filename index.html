@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#141522">
+<title>ПЕРЕМЕНА+ — маленький пуф. Большая перемена.</title>
+<meta name="description" content="Школьный проект: 10 новых мест для отдыха между уроками. Живая визуализация коридора, 3D-эскиз пуфа и прозрачный бюджет до 800 €.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ПЕРЕМЕНА+ — у перемены будет своё место">
+<meta property="og:description" content="10 пуфов. 750 € на закупку. 50 € в резерве. Идея одного класса — для общего пространства школы.">
+<meta property="og:image" content="assets/social-preview.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preload" as="image" href="assets/corridor.webp">
+<link rel="preload" as="image" href="assets/pouf.webp">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="assets/model3d.js" defer></script>
+<script src="assets/app.js" defer></script>
+<noscript><style>#pouf-canvas{display:none}#product-photo[hidden]{display:block!important}.model-switch,.model-controls,.model-hint{display:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#why">Перейти к содержанию</a>
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6Z"/></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 9M4 4v6h6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><path d="m8 8 8-4m-8 6 8 8"/><circle cx="5" cy="9" r="3"/><circle cx="19" cy="3" r="3"/><circle cx="19" cy="20" r="3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5a2 2 0 0 1 4 0v7-5a2 2 0 0 1 4 0v5-2a2 2 0 0 1 4 0v6c0 4-3 6-7 6-3 0-4-2-6-4l-4-5c-2-3 1-5 3-3l2 3Z"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="m10 4-5 5H2v6h3l5 5ZM14 8a6 6 0 0 1 0 8m3-12a11 11 0 0 1 0 16"/></symbol>
+<symbol id="i-full" viewBox="0 0 24 24"><path d="M3 9V3h6m6 0h6v6M3 15v6h6m6 0h6v-6"/></symbol>
+</defs></svg>
+<header class="site-header" id="header">
+ <a href="#start" class="brand" aria-label="Перемена плюс — в начало"><span class="brand-sign" aria-hidden="true"><i></i><i></i><b>+</b></span>ПЕРЕМЕНА<span class="brand-plus">+</span></a>
+ <nav class="top-nav" aria-label="Навигация"><a href="#why">Зачем</a><a href="#pouf">Идея</a><a href="#space">В коридоре</a><a href="#budget">Бюджет</a></nav>
+ <div class="header-actions"><button class="icon-button motion-toggle" aria-label="Уменьшить движение" aria-pressed="false" title="Уменьшить движение"><svg class="icon " aria-hidden="true"><use href="#i-spark"/></svg></button><button class="button button-small button-light" id="start-show"><svg class="icon " aria-hidden="true"><use href="#i-play"/></svg><span>Показ</span></button></div>
+</header>
+<main>
+<section class="chapter hero" id="start" aria-labelledby="hero-title" data-chapter="Начало">
+ <div class="hero-grain" aria-hidden="true"></div>
+ <div class="hero-orbit" aria-hidden="true"></div>
+ <div class="hero-scene-shell">
+  <div class="hero-scene-viewport"><div class="corridor-scene hero-room" role="img" aria-label="Эскиз: два серых пуфа у стены на фотографии школьного коридора">
+  <img class="corridor-base" src="assets/corridor.webp" alt="" width="1280" height="591" fetchpriority="high">
+  <div class="pouf-in-room pouf-back"><span class="floor-shadow"></span><img src="assets/pouf.webp" alt="" width="570" height="460"></div>
+  <div class="pouf-in-room pouf-front"><span class="floor-shadow"></span><img src="assets/pouf.webp" alt="" width="570" height="460"></div>
+ </div></div>
+  <div class="hero-scene-shade"></div>
+  <div class="scene-caption"><span class="live-dot"></span><span id="intro-caption">Знакомый коридор. Пока без новых пуфов.</span></div>
+  <span class="photo-tag">ВАША ШКОЛА · ЭСКИЗ ИДЕИ</span>
+  <div class="hero-seat-tag"><strong>+10</strong><span>новых мест<br>между уроками</span><svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></div>
+ </div>
+ <div class="hero-copy">
+  <div class="eyebrow"><span class="tiny-plus">+</span> ПРОЕКТ ОДНОГО КЛАССА. ДЛЯ ОБЩЕГО ПРОСТРАНСТВА.</div>
+  <h1 id="hero-title"><span class="line-one">ПЕРЕМЕНА.</span><span class="line-two">НОВАЯ</span><span class="line-three">ВЕРСИЯ<span class="title-period">.</span></span></h1>
+  <p class="hero-sub">Звонок прозвенел.<br>Теперь есть где <em>выдохнуть.</em></p>
+  <div class="hero-cta"><a class="button button-lime" href="#space">Увидеть перемену <svg class="icon " aria-hidden="true"><use href="#i-arrow"/></svg></a><button class="replay-button" id="replay-intro"><svg class="icon " aria-hidden="true"><use href="#i-replay"/></svg> Ещё раз</button></div>
+  <div class="hero-budget"><strong>800 €</strong><span>лимит проекта</span><span class="small-divider"></span><span>Без ремонта.<br>С заботой о людях.</span></div>
+ </div>
+ <span class="hero-side-note">НЕ ПРОСТО ПРОХОДИТЬ МИМО</span>
+ <a class="scroll-cue" href="#why"><span class="scroll-wheel"></span>Листайте — дальше самое интересное</a>
+ <button class="intro-skip" id="skip-intro">Пропустить вступление <svg class="icon " aria-hidden="true"><use href="#i-arrow"/></svg></button>
+</section>
+<div class="marquee" aria-hidden="true"><div>ПРИСЯДЬ. ПОГОВОРИМ. <span>✦</span> У ПЕРЕМЕНЫ БУДЕТ СВОЁ МЕСТО. <span>✦</span> ПРИСЯДЬ. ПОГОВОРИМ. <span>✦</span> У ПЕРЕМЕНЫ БУДЕТ СВОЁ МЕСТО. <span>✦</span></div></div>
+<section class="chapter why section-pad" id="why" aria-labelledby="why-title" data-chapter="Зачем">
+ <div class="section-top"><span class="eyebrow">01 / НЕ ПРО МЕБЕЛЬ. ПРО НАС.</span><span class="section-stamp">Есть идея <svg class="icon " aria-hidden="true"><use href="#i-spark"/></svg></span></div>
+ <div class="why-heading"><h2 id="why-title" class="reveal">Уроку — класс.<br>А <span class="underline-coral">перемене?</span></h2><p class="section-intro reveal">Иногда нужно совсем немного:<br>присесть, договорить мысль,<br>дождаться друга.</p></div>
+ <div class="need-grid">
+ <button class="need-card need-blue reveal" data-need="0" aria-pressed="true"><span class="card-number">01</span><span class="need-illustration pause-illustration" aria-hidden="true"><i></i><i></i><b>+</b></span><span class="need-title">Присесть.</span><span class="need-text">Не на подоконник.<br>На своё место.</span><span class="card-arrow"><svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></span></button>
+ <button class="need-card need-coral reveal" data-need="1" aria-pressed="false"><span class="card-number">02</span><span class="need-illustration speech-illustration" aria-hidden="true"><i>···</i><b>+</b></span><span class="need-title">Поговорить.</span><span class="need-text">Не на ходу.<br>Рядом с друзьями.</span><span class="card-arrow"><svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></span></button>
+ <button class="need-card need-lime reveal" data-need="2" aria-pressed="false"><span class="card-number">03</span><span class="need-illustration people-illustration" aria-hidden="true"><i></i><i></i><i></i></span><span class="need-title">Побыть рядом.</span><span class="need-text">Не обязательно говорить.<br>Можно просто быть вместе.</span><span class="card-arrow"><svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></span></button>
+ </div>
+ <div class="need-live" aria-live="polite"><span class="need-live-dot"></span><p id="need-description">Перемена короткая. Пусть возможность спокойно присесть будет рядом.</p><span class="micro">Нажмите на карточку</span></div>
+ <p class="honest-note">Диваны в школе уже есть. Мы предлагаем <strong>добавить места</strong>, а не переделывать коридоры.</p>
+</section>
+<section class="chapter product section-pad" id="pouf" aria-labelledby="pouf-title" data-chapter="Пуф в 3D">
+ <div class="section-top"><span class="eyebrow">02 / ПРОСТОЕ РЕШЕНИЕ. ЗАМЕТНЫЙ РЕЗУЛЬТАТ.</span><span class="product-badge">ПОТРОГАТЬ МОЖНО КУРСОРОМ <svg class="icon " aria-hidden="true"><use href="#i-hand"/></svg></span></div>
+ <div class="product-grid">
+  <div class="product-copy"><h2 id="pouf-title" class="reveal">Маленький<br>пуф.<br><span>Большая<br>перемена.</span></h2><p class="reveal">Не кабинет. Не ремонт.<br>Десять готовых мест для короткой<br>паузы между уроками.</p><div class="product-pills reveal"><span>+10 мест</span><span>Без ремонта</span><span>Для разных классов</span></div></div>
+  <div class="product-playground" id="product-playground">
+   <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="model-shadow" aria-hidden="true"></div>
+   <div class="model-switch" role="group" aria-label="Вид пуфа"><button data-model-view="3d" class="active" aria-pressed="true">3D-эскиз</button><button data-model-view="photo" aria-pressed="false">Фото товара</button></div>
+   <canvas id="pouf-canvas" tabindex="0" aria-label="Вращаемый 3D-эскиз пуфа. Перетаскивайте мышью или используйте стрелки влево и вправо."></canvas>
+   <img id="product-photo" class="product-photo" src="assets/pouf.webp" alt="Серый квадратный пуф в крупный рубчик с фотографии товара" width="570" height="460" hidden>
+   <div class="price-sticker"><strong>75 €<sup>*</sup></strong><span>за один пуф</span></div>
+   <div class="model-hint" id="model-hint"><svg class="icon " aria-hidden="true"><use href="#i-hand"/></svg> Вращайте. Рассмотрите со всех сторон.</div>
+   <div class="model-controls"><div class="swatches" role="group" aria-label="Цвет 3D-эскиза"><button class="swatch active" data-color="grey" style="--swatch:#858e94" aria-label="Серый" aria-pressed="true"></button><button class="swatch" data-color="sand" style="--swatch:#c9b69a" aria-label="Песочный" aria-pressed="false"></button><button class="swatch" data-color="light" style="--swatch:#c8c8c5" aria-label="Светло-серый" aria-pressed="false"></button></div><button class="model-reset icon-button" id="model-reset" title="Вернуть исходный ракурс" aria-label="Вернуть исходный ракурс"><svg class="icon " aria-hidden="true"><use href="#i-replay"/></svg></button><span id="model-color-name">Серый</span></div>
+  </div>
+ </div>
+ <p class="product-disclaimer">* Цена — на предоставленном скриншоте. 3D — художественный эскиз, не точная модель производителя. Размеры, оттенок, уход и пригодность для школы проверяем до заказа.</p>
+</section>
+<section class="chapter space section-pad" id="space" aria-labelledby="space-title" data-chapter="До / после">
+ <div class="section-top"><span class="eyebrow">03 / НЕ ВООБРАЖАЙТЕ. ПОСМОТРИТЕ.</span><span class="section-stamp stamp-lime">Фото вашей школы <svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></span></div>
+ <div class="space-heading"><h2 id="space-title" class="reveal">Тот же коридор.<br><span>Другая перемена.</span></h2><p class="section-intro reveal">Потяните границу.<br>Одно небольшое изменение —<br>и у пространства новый смысл.</p></div>
+ <div class="compare-wrap reveal" id="comparison" style="--split:57%">
+  <div class="compare-before"><img src="assets/corridor.webp" alt="Школьный коридор до установки новых пуфов" width="1280" height="591" loading="lazy"></div>
+  <div class="compare-after"><div class="corridor-scene compare-room" role="img" aria-label="Эскиз: два серых пуфа у стены на фотографии школьного коридора">
+  <img class="corridor-base" src="assets/corridor.webp" alt="" width="1280" height="591" loading="lazy">
+  <div class="pouf-in-room pouf-back"><span class="floor-shadow"></span><img src="assets/pouf.webp" alt="" width="570" height="460"></div>
+  <div class="pouf-in-room pouf-front"><span class="floor-shadow"></span><img src="assets/pouf.webp" alt="" width="570" height="460"></div>
+ </div></div>
+  <span class="compare-label compare-label-before">СЕЙЧАС</span><span class="compare-label compare-label-after">С ПУФАМИ</span>
+  <div class="compare-divider" aria-hidden="true"><span>↔</span></div>
+  <input type="range" id="compare-range" min="0" max="100" value="57" aria-label="Сравнение до и после. 0 — без новых пуфов, 100 — с пуфами">
+ </div>
+ <div class="compare-toolbar"><div class="compare-buttons"><button data-compare="0">Только «до»</button><button data-compare="57" class="active">Сравнить</button><button data-compare="100">Только «после»</button></div><span class="micro">ЭСКИЗ · ПОКАЗАНЫ 2 ИЗ 10 ПУФОВ</span></div>
+ <div class="placement-note"><span class="placement-icon"><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg></span><p><strong>Красиво — и продуманно.</strong> Точные места согласуем со школой после замеров. Проходы, двери, радиаторы и доступ к шкафчикам оставляем свободными. Все десять пуфов не обязательно стоят в одном коридоре.</p></div>
+</section>
+<section class="chapter budget section-pad" id="budget" aria-labelledby="budget-title" data-chapter="Бюджет">
+ <div class="section-top"><span class="eyebrow">04 / ЯРКАЯ ИДЕЯ. ПРОЗРАЧНЫЙ РАСЧЁТ.</span><span class="budget-limit">ЛИМИТ <strong>800 €</strong></span></div>
+ <div class="budget-grid">
+  <div class="budget-story"><h2 id="budget-title" class="reveal">Покупка одна.<br>Перемен —<br><span>много.</span></h2><p>Десять новых мест одновременно.<br>Для разных учеников в течение дня.</p><div class="mini-seats" id="mini-seats" aria-hidden="true"></div><div class="seats-caption"><strong id="seats-caption-count">10</strong> мест в выбранном варианте</div><button class="text-button" id="reset-budget">Вернуть план на 10 пуфов <svg class="icon " aria-hidden="true"><use href="#i-replay"/></svg></button></div>
+  <div class="budget-card reveal">
+   <div class="budget-card-top"><span>СОБЕРИТЕ СВОЙ ВАРИАНТ</span><span class="mini-pause">Ⅱ+</span></div>
+   <div class="quantity-control"><span>Количество пуфов</span><div class="stepper"><button id="qty-minus" aria-label="На один пуф меньше">−</button><output id="qty-output" for="quantity">10</output><button id="qty-plus" aria-label="На один пуф больше">+</button></div></div>
+   <input id="quantity" type="range" min="1" max="10" step="1" value="10" aria-label="Количество пуфов от 1 до 10">
+   <div class="budget-equation"><span id="equation">10 × 75 €*</span><span>=</span></div>
+   <div class="budget-total" aria-live="polite"><output id="budget-total" for="quantity">750</output><span>€</span></div>
+   <div class="budget-bar" role="progressbar" aria-label="Использовано бюджета" aria-valuemin="0" aria-valuemax="800" aria-valuenow="750"><span id="budget-fill" style="width:93.75%"></span></div>
+   <div class="budget-reserve"><span><i></i> Остаётся в резерве</span><strong id="reserve">50 €</strong></div>
+   <p class="budget-footnote">* 75 € — цена со скриншота, не подтверждённое коммерческое предложение. Итоговую цену и доставку уточняем до покупки. Резерв — не обязательный расход.</p>
+   <button class="source-button" id="open-source">Посмотреть источник цены <svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+  </div>
+ </div>
+ <details class="purchase-check"><summary>Что проверяем перед покупкой <span>+</span></summary><div><p><strong>Мебель:</strong> фактические размеры, высота сиденья, нагрузка, материал, чистка, износостойкость и документы для использования в школе.</p><p><strong>Пространство:</strong> замеры, доступность, свободные проходы и согласование с ответственным за безопасность.</p><p><strong>Заказ:</strong> окончательная цена, доставка, сроки, гарантия и сумма в пределах 800 €. Покупка — после согласования школы.</p></div></details>
+</section>
+<section class="chapter finale section-pad" id="together" aria-labelledby="final-title" data-chapter="Решение">
+ <div class="section-top"><span class="eyebrow">05 / МАЛЕНЬКОЕ ИЗМЕНЕНИЕ — НА КАЖДЫЙ ДЕНЬ.</span><span class="section-stamp">Наш следующий шаг <svg class="icon " aria-hidden="true"><use href="#i-arrow-up"/></svg></span></div>
+ <div class="final-grid">
+  <div class="final-copy"><h2 id="final-title" class="reveal">Дадим<br>перемене<br><span>своё место.</span></h2><p class="final-description">Не просто десять пуфов.<br>Десять приглашений:<br><strong>«Присаживайся рядом».</strong></p><a class="button button-lime final-button" href="#next-step">Давайте начнём с десяти <svg class="icon " aria-hidden="true"><use href="#i-arrow"/></svg></a><div class="final-summary"><strong>10 пуфов</strong><span>750 € на закупку</span><span>50 € в резерве</span></div></div>
+  <figure class="together-picture reveal"><img src="assets/together.webp" alt="Художественная иллюстрация: ученики общаются и читают, сидя на пуфах в коридоре" width="860" height="407" loading="lazy"><div class="picture-sticker">МЕСТО<br>ДЛЯ <em>ТЕБЯ.</em><span><svg class="icon " aria-hidden="true"><use href="#i-spark"/></svg></span></div><figcaption>Иллюстрация идеи. Не фотография учеников школы.</figcaption></figure>
+ </div>
+ <div class="next-step" id="next-step"><div class="step"><span>01</span><strong>Измерить</strong><p>Выбрать подходящие места.</p></div><div class="step"><span>02</span><strong>Согласовать</strong><p>Расстановку, мебель и бюджет.</p></div><div class="step"><span>03</span><strong>Заказать</strong><p>После проверки условий.</p></div><div class="step"><span>04</span><strong>Беречь</strong><p>Пользоваться вместе и аккуратно.</p></div></div>
+ <div class="final-actions"><button class="button button-white" id="show-again"><svg class="icon " aria-hidden="true"><use href="#i-play"/></svg> Показать проект</button><a class="button button-outline" href="downloads/PEREMENA_PLUS.pdf" download><svg class="icon " aria-hidden="true"><use href="#i-download"/></svg> PDF</a><a class="button button-outline" href="downloads/PEREMENA_PLUS.pptx" download><svg class="icon " aria-hidden="true"><use href="#i-download"/></svg> PowerPoint</a><button class="button button-outline" id="share-project"><svg class="icon " aria-hidden="true"><use href="#i-share"/></svg> Поделиться</button></div>
+</section>
+</main>
+<footer class="site-footer"><a href="#start" class="brand"><span class="brand-sign" aria-hidden="true"><i></i><i></i><b>+</b></span>ПЕРЕМЕНА+</a><p>Идея одного класса. Пространство для всех.</p><button class="text-button" id="restart-bottom">Вернуться в начало <svg class="icon " aria-hidden="true"><use href="#i-replay"/></svg></button><small>Без форм, счётчиков голосов и сбора данных учеников.</small></footer>
+<nav class="chapter-rail" aria-label="Разделы проекта"><a href="#start" class="active" aria-label="Начало" aria-current="location"><span>Начало</span></a><a href="#why" aria-label="Зачем"><span>Зачем</span></a><a href="#pouf" aria-label="Пуф в 3D"><span>Пуф в 3D</span></a><a href="#space" aria-label="До и после"><span>До / после</span></a><a href="#budget" aria-label="Бюджет"><span>Бюджет</span></a><a href="#together" aria-label="Решение"><span>Решение</span></a></nav>
+<div class="show-controls" id="show-controls" hidden role="region" aria-label="Управление показом"><button id="show-prev" aria-label="Предыдущий раздел">←</button><span id="show-page">1 / 6</span><button id="show-next" aria-label="Следующий раздел">→</button><span class="control-sep"></span><button id="show-play" aria-label="Приостановить автоматический показ"><svg class="icon " aria-hidden="true"><use href="#i-pause"/></svg></button><button id="show-fullscreen" aria-label="На весь экран"><svg class="icon " aria-hidden="true"><use href="#i-full"/></svg></button><button id="show-exit" aria-label="Завершить показ"><svg class="icon " aria-hidden="true"><use href="#i-close"/></svg></button><div class="show-progress"><i id="show-progress-fill"></i></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="source-dialog"><div class="dialog-heading"><h3>Исходная цена</h3><button class="icon-button" id="close-source" aria-label="Закрыть источник цены"><svg class="icon " aria-hidden="true"><use href="#i-close"/></svg></button></div><p>Скриншот, предоставленный для проекта: <strong>75 € за один пуф</strong>. Актуальность цены, параметры и условия заказа ещё нужно подтвердить у продавца.</p><img src="assets/price-source.webp" alt="Скриншот карточки серого пуфа с указанной ценой 75 евро" width="1695" height="894"><small>Документ-основание для предварительного расчёта, не публичная оферта.</small></dialog>
+<noscript><div class="noscript">Основное содержание доступно без JavaScript. Для анимации, 3D и интерактивного бюджета включите JavaScript.</div></noscript>
+</body></html>
