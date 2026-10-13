@@ -17,6 +17,7 @@ for (const name of ['app.js', 'model3d.js']) {
  new Script(readFileSync(resolve(root, 'assets', name), 'utf8'), { filename: name });
 }
 assert.ok(existsSync(resolve(root, 'assets/social-preview.jpg')), 'Missing social preview');
-assert.ok(!/<(?:script|link|img)[^>]+(?:src|href)="https?:\/\//.test(html), 'Remote runtime dependency found');
+const runtimeHtml = html.replace(/<link\b[^>]*\brel="canonical"[^>]*>/g, '');
+assert.ok(!/<(?:script|link|img)[^>]+(?:src|href)="https?:\/\//.test(runtimeHtml), 'Remote runtime dependency found');
 assert.ok(existsSync(resolve(root, '.nojekyll')), 'Missing .nojekyll');
 console.log('PASS: six chapters, unique IDs, local assets, JavaScript syntax, no runtime CDN dependencies.');
